@@ -1,0 +1,32 @@
+﻿@model TDC.UI.Web.Models.Sala
+@{
+    ViewBag.Title = "Cadastrar Sala";
+}
+
+
+<div class="page-header">
+    <h1>Sala <small>organize as salas onde será ministrado as palestras</small></h1>
+</div>
+
+<form method="POST" action="">
+    {
+
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Nova Sala</legend>
+        <div class="form-group">
+            <label for="Nome">Nome da Sala</label>
+
+            <input id="Nome" name="Nome" type="text" class="form-control" placeholder="Digite o nome da sala">
+            @Html.ValidationMessageFor(x=>x.Nome)
+        </div>
+
+        <hr />
+        <p>
+            <button type="submit" class="btn btn-sm btn-info">Salvar</button>
+            <a href="@Url.Action("Index","Sala")">Cancelar</a>
+        </p>
+    </fieldset>
+</form>
+    }
+
