@@ -1,0 +1,33 @@
+﻿@model TDC.UI.Web.Models.Sala
+@{
+    ViewBag.Title = "Excluir esta Sala ?";
+}
+
+
+<div class="page-header">
+    <h1>Sala <small>organize as salas onde será ministrado as palestras</small></h1>
+    <a href="@Url.Action("Index","Sala")" class="btn btn-sm btn-primary">Cadastrar</a>
+</div>
+
+<div class="alert alert-danger">
+    <strong>Atenção !</strong> Deseja Realmente Excluir este Registro ?
+</div>
+<fieldset>
+
+    <legend>Nova Sala</legend>
+    <div class="form-group">
+        <label for="Nome">Detalhe da Sala</label>
+
+        <strong>Nome</strong> @Model.Nome
+    </div>
+    
+</fieldset>
+<hr />
+<form method="POST" action="">
+    <input type="hidden" value="@Model.Id" name="Id" id="Id"/>
+    <p>
+        <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
+        <a href="@Url.Action("Index","Sala")" class="btn btn-sm btn-info">Cancelar</a>
+    </p>
+
+</form>

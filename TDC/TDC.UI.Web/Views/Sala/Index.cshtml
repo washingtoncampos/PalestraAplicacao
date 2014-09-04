@@ -19,7 +19,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Nome da sala</th>
+                            <th>Nome da Sala</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -31,12 +31,12 @@
 
                             <tr>
                                 <td style="width: 50px">@x</td>
-                                <td><a href="#">Sala Minhoca</a></td>
+                                <td><a href="@Url.Action("Detalhe","Sala", new { Id=item.Id} )">@item.Nome</a></td>
                                 <td style="width: 100px">
-                                    <a href="" class="btn btn-info btn-sm">
+                                    <a href="@Url.Action("Editar","Sala", new { Id=item.Id} )" class="btn btn-info btn-info">
                                         <span class="glyphicon glyphicon-edit"></span>
                                     </a>
-                                    <a href="" class="btn btn-info btn-sm">
+                                    <a href="@Url.Action("Excluir","Sala", new { Id=item.Id} )" class=" btn btn-danger btn-danger">
                                         <span class="glyphicon glyphicon-trash"></span>
                                     </a>
                                 </td>
