@@ -14,16 +14,14 @@
 
     <legend>Nova Sala</legend>
     <div class="form-group">
-        <label for="Nome">Detalhe da Sala</label>
-
         <strong>Nome</strong> @Model.Nome
     </div>
     
 </fieldset>
 <hr />
 <p>
-    <a href="@Url.Action("Editar","Sala", new {Id=Model.Id} )" class="btn btn-sm btn-danger ">Cancelar</a>
-    <a href="@Url.Action("Cadastrar","Sala")">Voltar</a>
+    <a href="@Url.Action("Editar","Sala", new {Id=Model.Id} )" class="btn btn-sm btn-info ">Detalhe</a>
+    <a href="@Url.Action("Cadastrar","Sala")" class="btn btn-sm btn-danger ">Voltar</a>
 </p>
 
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
